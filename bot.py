@@ -6,7 +6,7 @@ bot = Client(
     "myfirs",
     api_id=17983098,
     api_hash="ee28199396e0925f1f44d945ac174f64",
-    bot_token="6197523213:AAFifXnQq1yZDWCucZow9R1CA8jxLnlrYgU"
+    bot_token="6197523213:AAEGxacUoJ82ByhhD5NatrrC8NdA9LLH2lg"
 )
 @bot.on_message(filters.command('start') & filters.private)
 def command1(bot,message):
@@ -34,7 +34,7 @@ def _start_point(client, message):
    with open(filename, 'rb') as f:
         bot.send_audio(message.chat.id, f)
         subprocess.call(['unlink',filename])  
-        subprocess.call(['rm','-r',"./downloads/"])
+        subprocess.call(['unlink',file_path])
 
  
 
